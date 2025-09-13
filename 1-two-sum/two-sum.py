@@ -1,13 +1,17 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        seen= {}
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
 
-        for i,n in enumerate(nums):
-            if target - n in seen:
-                return ([seen[target-n],i])
-            elif n not in seen:
-                seen[n]=i
+        Store = {}
 
-        
-                    
+        for i in range(len(nums)):
+            diff = target - nums[i]
+
+            if diff in Store:
+                return [Store[diff],i]
+            Store[nums[i]] = i
         
