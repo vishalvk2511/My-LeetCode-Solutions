@@ -8,8 +8,8 @@ class Solution(object):
         res = {}
 
         for s in strs:
-            key = tuple(sorted(s))
-            #key = ''.join(sorted(s))
+            #key = tuple(sorted(s))
+            key = ''.join(sorted(s))
             if key in res:
                 res[key].append(s)
             else:
