@@ -5,21 +5,22 @@ class Solution(object):
         :rtype: List[List[str]]
         """
         
-        '''res = {}
+        res = {}
 
         for s in strs:
-            key = tuple(sorted(s))
+            #key = tuple(sorted(s))
+            key = ''.join(sorted(s))
             if key in res.keys():
                 res[key].append(s)
             else:
                 res[key]=[s]
-        return list(res.values())'''
+        return list(res.values())
         
-        res = defaultdict(list)
+        '''res = defaultdict(list)
 
         for s in strs:
             sortedword = ''.join(sorted(s))
             res[sortedword].append(s)
 
-        return list(res.values())
+        return list(res.values())'''
             
